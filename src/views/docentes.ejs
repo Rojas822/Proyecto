@@ -30,17 +30,19 @@
                         </tr>
                     </thead>
                     <tbody> 
-                        <%if(data){ %>
+                       <%if(data){ %>
                             <% for (var i =0; i< data.length; i++){ %>
                                 <tr>
                                     <td><%= (i+1) %></td>
                                     <td><%= data[i].name %></td>
                                     <td><%= data[i].last_name %></td>
                                     <td><%= data[i].password %></td>
+                                    <td>
+                                        <a href="/delete/>%=data[i.id]" class="btn btn-danger">Borrar</a>
+                                    </td>
                                 </tr>
                             <%}%>    
                         <%}%>
-                        
                     </tbody>
                 </table>
             </div>
@@ -67,7 +69,5 @@
             </div>
         </div>
     </div>
-    
-
 </body>
 </html>
