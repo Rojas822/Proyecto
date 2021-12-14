@@ -1,6 +1,6 @@
-const controller = {};
+const controllerD = {};
 
-controller.list = (req, res) => {
+controllerD.listD = (req, res) => {
   req.getConnection((err, conn) => {
     conn.query('SELECT * FROM DOCENTE', (err, docente) => {
      if (err) {
@@ -13,7 +13,7 @@ controller.list = (req, res) => {
   });
 };
 
-controller.save = (req, res) => {
+controllerD.saveD = (req, res) => {
   const data = req.body;
   console.log(req.body)
   req.getConnection((err, connection) => {
@@ -24,7 +24,7 @@ controller.save = (req, res) => {
   })
 };
 
-controller.edit = (req, res) => {
+controllerD.editD = (req, res) => {
   const { id } = req.params;
   req.getConnection((err, conn) => {
     conn.query("SELECT * FROM DOCENTE WHERE idDocente = ?", [id], (err, rows) => {
@@ -35,7 +35,7 @@ controller.edit = (req, res) => {
   });
 };
 
-controller.update = (req, res) => {
+controllerD.updateD = (req, res) => {
   const { id } = req.params;
   const newDocente = req.body;
   req.getConnection((err, conn) => {
@@ -46,7 +46,7 @@ controller.update = (req, res) => {
   });
 };
 
-controller.delete = (req, res) => {
+controllerD.deleteD = (req, res) => {
   const { id } = req.params;
   req.getConnection((err, connection) => {
     connection.query('DELETE FROM DOCENTE WHERE idDocente = ?', [id], (err, rows) => {
@@ -55,4 +55,4 @@ controller.delete = (req, res) => {
   });
 }
 
-module.exports = controller;
+module.exports = controllerD;

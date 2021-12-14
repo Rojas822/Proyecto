@@ -3,10 +3,10 @@ const router = require('express').Router();
 const estudianteController = require('../controllers/estudianteController');
 
 router.get('/', estudianteController.list);
-router.post('/add', estudianteController.save);
-router.get('/update/:id', estudianteController.edit);
-router.post('/update/:id', estudianteController.update);
-router.get('/delete/:id', estudianteController.delete);
+router.post('/addes', estudianteController.save);
+router.get('/updates/:id', estudianteController.edit);
+router.post('/updates/:id', estudianteController.update);
+router.get('/deletes/:id', estudianteController.delete);
 
 module.exports = router;
 

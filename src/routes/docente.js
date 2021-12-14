@@ -2,11 +2,11 @@ const router = require('express').Router();
 
 const docenteController = require('../controllers/docenteController');
 
-router.get('/', docenteController.list);
-router.post('/add', docenteController.save);
-router.get('/update/:id', docenteController.edit);
-router.post('/update/:id', docenteController.update);
-router.get('/delete/:id', docenteController.delete);
+router.get('/', docenteController.listD);
+router.post('/add', docenteController.saveD);
+router.get('/update/:id', docenteController.editD);
+router.post('/update/:id', docenteController.updateD);
+router.get('/delete/:id', docenteController.deleteD);
 
 
 module.exports = router;
