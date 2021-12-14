@@ -29,8 +29,8 @@ app.use(express.urlencoded({extended: false}));
 
 // routes
 app.use('/', customerRoutesE);
-app.use('/docente', customerRoutesE);
-app.use('/estudiante', customerRoutesD);
+app.use('/docente', customerRoutesD);
+app.use('/estudiante', customerRoutesE);
 
 
 
