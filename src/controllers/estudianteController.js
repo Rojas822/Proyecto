@@ -39,7 +39,6 @@ controller.update = (req, res) => {
   const { id } = req.params;
   const newEstudiante = req.body;
   req.getConnection((err, conn) => {
-
   conn.query('UPDATE ESTUDIANTE set ? where idEstudiante = ?', [newEstudiante, id], (err, rows) => {
     res.redirect('/');
   });
