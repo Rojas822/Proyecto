@@ -28,7 +28,7 @@ controller.edit = (req, res) => {
   const { id } = req.params;
   req.getConnection((err, conn) => {
     conn.query("SELECT * FROM DOCENTE WHERE idDocente = ?", [id], (err, rows) => {
-      res.render('customers_edit', {
+      res.render('docente_edit', {
         data: rows[0]
       })
     });
