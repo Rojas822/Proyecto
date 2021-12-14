@@ -1,22 +1,8 @@
 {
-  "name": "software",
+  "name": "crud-nodejs-mysql",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "nodemon src/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Rojas822/Proyecto.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Rojas822/Proyecto/issues"
-  },
-  "homepage": "https://github.com/Rojas822/Proyecto#readme",
   "dependencies": {
     "ejs": "^2.7.4",
     "express": "^4.17.1",
@@ -25,6 +11,12 @@
     "mysql": "^2.18.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
-  }
+    "nodemon": "^1.19.4"
+  },
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

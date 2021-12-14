@@ -1,0 +1,57 @@
+<% include partials/_header %>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-7">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <td>n°</td>
+            <td>Nombres</td>
+            <td>Apellidos</td>
+            <td>Contraseña</td>
+            <td>Acciones</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (data) { %>
+            <% for(var i = 0; i < data.length; i++) { %>
+              <tr>
+                <td><%= (i + 1) %></td>
+                <td><%= data[i].nombresDocente %></td>
+                <td><%= data[i].apellidosDocente %></td>
+                <td><%= data[i].contraseñaDocente %></td>
+                <td>
+                  <a href="/update/<%= data[i].idDocente %>" class="btn btn-info">Edit</a>
+                  <a href="/delete/<%= data[i].idDocente %>" class="btn btn-danger">Delete</a>
+                </td>
+              </tr>
+            <% } %>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-5">
+      <div class="card-body">
+        <div class="card-header">Creacion Docente</div>
+        <form action="/add" method="POST">
+          <div class="form-group">
+            <input type="text" name="nombresDocente" placeholder="Nombres" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="apellidosDocente" placeholder="Apellidos" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="contraseñaDocente" placeholder="Contraseñas" class="form-control">
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Crear Profesor 
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/_footer %>
