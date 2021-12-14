@@ -22,8 +22,8 @@
                 <td><%= data[i].apellidosDocente %></td>
                 <td><%= data[i].contraseñaDocente %></td>
                 <td>
-                  <a href="/update/<%= data[i].idDocente %>" class="btn btn-info">Edit</a>
-                  <a href="/delete/<%= data[i].idDocente %>" class="btn btn-danger">Delete</a>
+                  <a href="docente/update/<%= data[i].idDocente %>" class="btn btn-info">Edit</a>
+                  <a href="docente/delete/<%= data[i].idDocente %>" class="btn btn-danger">Delete</a>
                 </td>
               </tr>
             <% } %>
@@ -34,7 +34,7 @@
     <div class="col-md-5">
       <div class="card-body">
         <div class="card-header">Creacion Docente</div>
-        <form action="/add" method="POST">
+        <form action="docente/add" method="POST">
           <div class="form-group">
             <input type="text" name="nombresDocente" placeholder="Nombres" class="form-control" autofocus>
           </div>

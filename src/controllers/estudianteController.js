@@ -19,7 +19,7 @@ controller.save = (req, res) => {
   req.getConnection((err, connection) => {
     const query = connection.query('INSERT INTO ESTUDIANTE set ?', data, (err, estudiante) => {
       console.log(estudiante)
-      res.redirect('/');
+      res.redirect('/estudiante');
     })
   })
 };
@@ -40,7 +40,7 @@ controller.update = (req, res) => {
   const newEstudiante = req.body;
   req.getConnection((err, conn) => {
   conn.query('UPDATE ESTUDIANTE set ? where idEstudiante = ?', [newEstudiante, id], (err, rows) => {
-    res.redirect('/');
+    res.redirect('/estudiante');
   });
   });
 };
@@ -49,7 +49,7 @@ controller.delete = (req, res) => {
   const { id } = req.params;
   req.getConnection((err, connection) => {
     connection.query('DELETE FROM ESTUDIANTE WHERE idEstudiante = ?', [id], (err, rows) => {
-      res.redirect('/');
+      res.redirect('/estudiante');
     });
   });
 }

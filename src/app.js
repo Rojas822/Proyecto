@@ -28,7 +28,7 @@ app.use(myConnection(mysql, {
 app.use(express.urlencoded({extended: false}));
 
 // routes
-app.use('/', customerRoutesE);
+app.use('/', customerRoutesD);
 app.use('/docente', customerRoutesD);
 app.use('/estudiante', customerRoutesE);
 
