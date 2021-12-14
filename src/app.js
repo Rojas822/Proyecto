@@ -11,7 +11,7 @@ const customerRoutesD = require('./routes/docente');
 
 
 // settings
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -29,10 +29,10 @@ app.use(express.urlencoded({extended: false}));
 // routes
 app.use('/', customerRoutesE);
 app.get('/docente', function(request, response) {
-  response.render('./routes/docente');
+  response.render('./views/');
 });
 app.get('/estudiante', function(request, response) {
-  response.render('./routes/estudiante');
+  response.render('./views/');
 });
 
 
