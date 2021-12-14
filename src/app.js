@@ -3,23 +3,17 @@ const express = require('express'),
       morgan = require('morgan'),
       mysql = require('mysql'),
       myConnection = require('express-myconnection');
-
 const app = express();
 
 // importing routes
-const customerRoutesE = require('./routes/estudiante');
+const customerRoutesE = require('./routes/estudiante/e');
 
 
 
 // settings
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.set('.ejs', ejs({
-  defaultLayout: 'main',
-  layoutsDir: path.join(app.get('views')),
-  partialsDir: path.join(app.get('views'), 'partials'),
-  extname: '.ejs',
-}));
+app.set('view engine', 'ejs');
 
 // middlewares
 app.use(morgan('dev'));
