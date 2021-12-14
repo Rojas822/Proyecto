@@ -8,6 +8,7 @@ const app = express();
 // importing routes
 const customerRoutesE = require('./routes/estudiante');
 const customerRoutesD = require('./routes/docente');
+const customerRoutes = require('./routes/inicio');
 
 
 // settings
@@ -28,12 +29,9 @@ app.use(express.urlencoded({extended: false}));
 
 // routes
 app.use('/', customerRoutesE);
-app.get('/docente', function(request, response) {
-  response.render('./views/');
-});
-app.get('/estudiante', function(request, response) {
-  response.render('./views/');
-});
+app.use('/docente', customerRoutesE);
+app.use('/estudiante', customerRoutesD);
+
 
 
 // static files
