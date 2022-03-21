@@ -16,6 +16,6 @@ define("DB_PASSWORD", "unu7hkd6dzkieaz6");
 define("DB_ENCODE", "utf8");
 
 //nombre del proyecto
-//define("PRO_NOMBRE", "CompartiendoCodigos");
+define("PRO_NOMBRE", "CompartiendoCodigos");
  
  ?> 
