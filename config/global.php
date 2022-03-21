@@ -1,16 +1,16 @@
 <?php 
 //ip de la pc servidor base de datos
-define("DB_HOST", "b1czbpsjr5iuhtqwrbqm-mysql.services.clever-cloud.com");
+define("DB_HOST", "localhost");
 
 // nombre de la base de datos
-define("DB_NAME", "b1czbpsjr5iuhtqwrbqm");
+define("DB_NAME", "sis_school");
 
 
 //nombre de usuario de base de datos
-define("DB_USERNAME", "unu7hkd6dzkieaz6");
+define("DB_USERNAME", "root");
 
 //conraseña del usuario de base de datos
-define("DB_PASSWORD", "unu7hkd6dzkieaz6");
+define("DB_PASSWORD", "");
 
 //codificacion de caracteres
 define("DB_ENCODE", "utf8");
