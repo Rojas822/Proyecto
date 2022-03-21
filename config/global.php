@@ -1,16 +1,16 @@
 <?php 
 //ip de la pc servidor base de datos
-define("DB_HOST", "localhost");
+define("DB_HOST", "sql10.freesqldatabase.com");
 
 // nombre de la base de datos
-define("DB_NAME", "sis_school");
+define("DB_NAME", "sql10480645");
 
 
 //nombre de usuario de base de datos
-define("DB_USERNAME", "root");
+define("DB_USERNAME", "sql10480645");
 
 //conraseña del usuario de base de datos
-define("DB_PASSWORD", "");
+define("DB_PASSWORD", "pUIaLhyivN");
 
 //codificacion de caracteres
 define("DB_ENCODE", "utf8");
